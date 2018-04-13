@@ -7,8 +7,14 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run unit tests
+          name: Dependencies
+          command: |
+            go get -u github.com/golang/dep/cmd/dep
+            dep ensure
+            echo "Go dependencies updated"
+      - run:
+          name: Tests
           command: go test ./... -race -coverprofile=coverage.txt -covermode=atomic
       - run:
-          name: Store coverage
+          name: Coverage
           command: bash <(curl -s https://codecov.io/bash)
