@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Run unit tests
-          command: go test -race -coverprofile=coverage.txt -covermode=atomic
+          command: go test ./... -race -coverprofile=coverage.txt -covermode=atomic
       - run:
           name: Store coverage
           command: bash <(curl -s https://codecov.io/bash)
