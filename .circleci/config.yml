@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    working_directory: /go/src/github.com/Seize/go-utils
+    docker:
+      - image: circleci/golang:1.10
+    steps:
+      - checkout
+      - run:
+          name: Run unit tests
+          command: go test -race -coverprofile=coverage.txt -covermode=atomic
+      - run:
+          name: Store coverage
+          command: bash <(curl -s https://codecov.io/bash)
