@@ -9,6 +9,7 @@
 ## Packages
 
 - [![GoDoc](https://godoc.org/github.com/deize/go-utils/url?status.svg)](http://godoc.org/github.com/seize/go-utils/url) URL package
+- [![GoDoc](https://godoc.org/github.com/deize/go-utils/validator?status.svg)](http://godoc.org/github.com/seize/go-utils/validator) Validator package
 
 ## Maintainer
 
