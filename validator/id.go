@@ -1,4 +1,4 @@
-package validutil
+package validator
 
 import (
 	validator "gopkg.in/go-playground/validator.v9"

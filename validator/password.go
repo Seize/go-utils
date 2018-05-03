@@ -1,4 +1,4 @@
-package validutil
+package validator
 
 import (
 	"regexp"

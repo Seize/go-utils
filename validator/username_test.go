@@ -1,11 +1,11 @@
-package validutil_test
+package validator_test
 
 import (
 	"testing"
 
 	"github.com/seize/go-utils/validator"
 	"github.com/stretchr/testify/assert"
-	validator "gopkg.in/go-playground/validator.v9"
+	v "gopkg.in/go-playground/validator.v9"
 )
 
 var usernameItems = []struct {
@@ -26,8 +26,8 @@ var usernameItems = []struct {
 
 // TestValidateUsername ...
 func TestValidateUsername(t *testing.T) {
-	validate := validator.New()
-	validate.RegisterValidation("username", validutil.ValidateUsername)
+	validate := v.New()
+	validate.RegisterValidation("username", validator.ValidateUsername)
 
 	for _, item := range usernameItems {
 		err := validate.Var(item.have, "username")
