@@ -14,6 +14,7 @@ var serverItems = []struct {
 }{
 	{"rtmp:///xxxxx", false},
 	{"rtmp://a.rtmp.youtube.com/live2", true},
+	{"rtmps://a.rtmp.youtube.com/live2", true},
 }
 
 // TestValidateURLStream ...
